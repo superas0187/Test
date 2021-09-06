@@ -1,10 +1,25 @@
-*{
+
+:root{
+    --mainColor:#fffefe;
+	--secondaryColor:#fff;
+
+	--borderColor:#f8f8f8;
+
+	--mainText:black;
+	--secondaryText:#b1b4b6;
+
+	--themeDotBorder:#24292e;
+
+	--previewBg:rgba(245, 245, 245, 0.8);
+	--previewShadow:#fffefa;
+
+
+	--buttonColor:black;
+}
+
+html, body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-
-}
-html{
     scroll-behavior: smooth;
 }
 
@@ -85,10 +100,10 @@ html{
 }
 
 .headings{
-    font-family: century;
-    font-size: 3rem;
+    font-family: georgia;
+    font-size: 2.3rem;
     text-align: center;
-    margin: 40px 0px;
+    margin: 20px 0px;
 }
 
 .btn{
@@ -122,23 +137,37 @@ html{
 }
 
 #pic img{
-    width: 575px;
-    height: 400px;
+    width: 550px;
+    height: 340px;
+    display: flex;
+    border: 1px solid black;
+    margin: 10px;
+    
+    border-radius: 15px;
+    
+    
 }
 
 #intro{
     display: flex;
     flex-direction: column;
     text-align: justify;
-    padding: 10px;
+    margin: 15px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    /* border: 1px solid black; */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgb(255, 45, 45);
 }
+
 
 #intro h2{
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-#portfolio{
+/* #portfolio{
     display: flex;
     flex-direction: column;
     background-color:rgba(0, 0, 0, 0.9);
@@ -146,20 +175,69 @@ html{
     align-items: center;
     padding: 20px;
 
+} */
+
+.main-container{
+	width: 1200px;
+	margin: 0 auto;
 }
 
-.gallery{
+.s1{
+	background-color: var(--mainColor);
+	border-bottom:1px solid var(--borderColor);
+	overflow:auto;
+}
+
+/* .gallery{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     box-sizing: border-box;
+} */
+
+.thumbnail{
+	display: block;
+	width: 100%;
+	height:180px;
+	object-fit: cover;
 }
 
-.gallery img{
+.post-preview{
+	background-color:rgba(252, 252, 252, 0.9);
+	padding:15px;
+}
+
+.post-title{
+	color:black;
+	margin: 0;
+}
+
+.post-intro{
+	color:#313335;
+	font-size: 14px;
+}
+
+.post-wrapper{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 320px);
+	gap:20px;
+	justify-content: center;
+	padding-bottom: 50px;
+}
+
+.post{
+	border:1px solid var(--borderColor);
+	-webkit-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+	-moz-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+	box-shadow: -2px 7px 21px -9px rgba(0,0,0,0.75);
+}
+
+
+/* .gallery img{
     width: 360px;
     height: 240px;
     margin: 10px;
-}
+} */
 
 /* Services Section */
 #services{
